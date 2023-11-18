@@ -16,7 +16,7 @@ export default function AreaCharts(props){
 
     return(
         <>
-            <ResponsiveContainer width="100%" height={400}>
+            <ResponsiveContainer width="100%" height={500}>
                 <AreaChart data={data}>
                     <XAxis dataKey="time" />
                     <YAxis width={20} domain={['auto', 'auto']}/>

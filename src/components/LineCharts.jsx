@@ -14,7 +14,7 @@ export default function LineCharts(props) {
 
     return (
         <>
-            <ResponsiveContainer width="100%" height={400}>
+            <ResponsiveContainer width="100%" height={500}>
                 <LineChart
                     data={data}
                 >
