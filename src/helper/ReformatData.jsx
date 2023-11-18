@@ -52,6 +52,27 @@ export default function ReformatData(data, type) {
             };
         });
     }
+    else if(type == "radiation"){
+        return data.hourly.time.map((time, index) => {
+        
+            const date = new Date(time);
+            const formattedDate = `${date.getDate()} ${
+                months[date.getMonth()]
+            }`;
+            const formattedTime = `${date
+                .getHours()
+                .toString()
+                .padStart(2, "0")}:${date
+                .getMinutes()
+                .toString()
+                .padStart(2, "0")}`;
+    
+            return {
+                time: `${formattedDate} ${formattedTime}`,
+                direct_radiation: data.hourly.direct_radiation[index],
+            };
+        });
+    }
 
     
     

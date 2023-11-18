@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import BarCharts from "./components/BarCharts";
 import ReformatData from "./helper/ReformatData";
 import LineCharts from "./components/LineCharts";
+import AreaCharts from "./components/AreaCharts";
 
 function App() {
     const [data, setData] = useState(0);
@@ -329,6 +330,7 @@ function App() {
 
     const reformattedData = ReformatData(static_data, "humidity");
     const reformattedData_temperature = ReformatData(static_data, "temperature");
+    const reformattedData_radiation = ReformatData(static_data, "radiation");
     console.log(reformattedData);
 
     const fetchData = async () => {
@@ -359,6 +361,7 @@ function App() {
                 <h1>Relative Humidity</h1>
                 <BarCharts data={reformattedData}></BarCharts>
                 <LineCharts data={reformattedData_temperature}></LineCharts>
+                <AreaCharts data={reformattedData_radiation}></AreaCharts>
             </div>
         </>
     );
