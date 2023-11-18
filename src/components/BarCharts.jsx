@@ -22,7 +22,6 @@ export default function BarCharts(props) {
                     <YAxis dataKey="relativehumidity_2m" width={20}/>
                     <Tooltip />
                     <Legend />
-                    <Bar name="Time (Hourly)" dataKey="time" fill="#8884d8" />
                     <Bar name="Relative Humidity (2m)" dataKey="relativehumidity_2m" fill="#82ca9d" />
                     <Brush startIndex={0} endIndex={23} height={20}></Brush>
                 </BarChart>
