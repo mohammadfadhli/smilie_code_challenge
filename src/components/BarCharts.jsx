@@ -7,6 +7,7 @@ import {
     Legend,
     Bar,
     ResponsiveContainer,
+    Brush
 } from "recharts";
 
 export default function BarCharts(props) {
@@ -23,6 +24,7 @@ export default function BarCharts(props) {
                     <Legend />
                     <Bar name="Time" dataKey="time" fill="#8884d8" />
                     <Bar name="Relative Humidity" dataKey="relativehumidity_2m" fill="#82ca9d" />
+                    <Brush startIndex={0} endIndex={23}></Brush>
                 </BarChart>
             </ResponsiveContainer>
         </>
