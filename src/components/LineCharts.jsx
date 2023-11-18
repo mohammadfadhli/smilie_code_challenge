@@ -24,14 +24,18 @@ export default function LineCharts(props) {
                     <Tooltip />
                     <Legend />
                     <Line
+                        name="Maximum Temperature (2m)"
                         type="monotone"
                         dataKey="temperature_2m_max"
                         stroke="#8884d8"
+                        strokeWidth={3}
                     />
                     <Line
+                        name="Minimum Temperature (2m)"
                         type="monotone"
                         dataKey="temperature_2m_min"
                         stroke="#82ca9d"
+                        strokeWidth={3}
                     />
                 </LineChart>
             </ResponsiveContainer>

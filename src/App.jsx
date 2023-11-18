@@ -36,16 +36,31 @@ function App() {
         fetchData();
     }, []);
 
-    console.log(data)
+    console.log(data);
 
+    // Render Loading while waiting to fetch data from API
+    if (isLoading) {
+        return <div className="container mx-auto px-3 my-5">Loading...</div>;
+    }
 
     return (
         <>
-            <div className="container mx-auto">
-              {!isLoading ? <div> <BarCharts data={humidity}></BarCharts>
-                <LineCharts data={temperature}></LineCharts>
-                <AreaCharts data={radiation}></AreaCharts></div> : <div>notloaded</div>}
-               
+            <div className="container mx-auto px-3 my-5">
+                <h1 className="text-4xl font-semibold">Dashboard</h1>
+                <div className="grid gap-4 grid-cols-1">
+                    <div className="rounded-lg p-3 shadow-xl">
+                        <h2 className="text-center">Relative Humidity</h2>
+                        <BarCharts data={humidity}></BarCharts>
+                    </div>
+                    <div className="rounded-lg p-3 shadow-xl">
+                    <h2 className="text-center">Temperature</h2>
+                    <LineCharts data={temperature}></LineCharts>
+                    </div>
+                    <div className="rounded-lg p-3 shadow-xl">
+                    <h2 className="text-center">Radiation</h2>
+                    <AreaCharts data={radiation}></AreaCharts>
+                    </div>
+                </div>
             </div>
         </>
     );
