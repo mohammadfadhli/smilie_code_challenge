@@ -6,7 +6,8 @@ import {
     Tooltip,
     Area,
     ResponsiveContainer,
-    Legend
+    Legend,
+    Brush
 } from "recharts";
 
 export default function AreaCharts(props){
@@ -33,6 +34,7 @@ export default function AreaCharts(props){
                     <Tooltip />
                     <Legend />
                     <Area type="monotone" name="Direct Radiation" dataKey="direct_radiation" stroke="#8884d8" fillOpacity={1} fill="url(#colorUv)" />
+                    <Brush startIndex={7} endIndex={19}></Brush>
                 </AreaChart>
             </ResponsiveContainer>
         </>
