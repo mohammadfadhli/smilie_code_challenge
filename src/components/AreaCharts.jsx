@@ -29,7 +29,7 @@ export default function AreaCharts(props){
                         </linearGradient>
                     </defs>
                     <XAxis dataKey="time" />
-                    <YAxis />
+                    <YAxis width={20}/>
                     <CartesianGrid strokeDasharray="3 3" />
                     <Tooltip />
                     <Legend />

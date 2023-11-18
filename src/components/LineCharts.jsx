@@ -20,7 +20,7 @@ export default function LineCharts(props) {
                 >
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="time" />
-                    <YAxis />
+                    <YAxis width={20}/>
                     <Tooltip />
                     <Legend />
                     <Line
