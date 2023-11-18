@@ -24,7 +24,7 @@ export default function BarCharts(props) {
                     <Legend />
                     <Bar name="Time (Hourly)" dataKey="time" fill="#8884d8" />
                     <Bar name="Relative Humidity (2m)" dataKey="relativehumidity_2m" fill="#82ca9d" />
-                    <Brush startIndex={0} endIndex={23}></Brush>
+                    <Brush startIndex={0} endIndex={23} height={20}></Brush>
                 </BarChart>
             </ResponsiveContainer>
         </>

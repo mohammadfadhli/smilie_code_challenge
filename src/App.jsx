@@ -49,16 +49,22 @@ function App() {
                 <h1 className="text-4xl font-semibold">Dashboard</h1>
                 <div className="grid gap-4 grid-cols-1">
                     <div className="rounded-lg p-3 shadow-xl">
-                        <h2 className="text-center">Relative Humidity</h2>
+                        <h2 className="text-lg font-semibold text-center">
+                            Relative Humidity
+                        </h2>
                         <BarCharts data={humidity}></BarCharts>
                     </div>
                     <div className="rounded-lg p-3 shadow-xl">
-                    <h2 className="text-center">Temperature</h2>
-                    <LineCharts data={temperature}></LineCharts>
+                        <h2 className="text-lg font-semibold text-center">
+                            Temperature
+                        </h2>
+                        <LineCharts data={temperature}></LineCharts>
                     </div>
                     <div className="rounded-lg p-3 shadow-xl">
-                    <h2 className="text-center">Radiation</h2>
-                    <AreaCharts data={radiation}></AreaCharts>
+                        <h2 className="text-lg font-semibold text-center">
+                            Radiation
+                        </h2>
+                        <AreaCharts data={radiation}></AreaCharts>
                     </div>
                 </div>
             </div>

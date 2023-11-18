@@ -24,7 +24,7 @@ export default function AreaCharts(props){
                     <Tooltip />
                     <Legend />
                     <Area type="monotone" name="Direct Radiation" dataKey="direct_radiation" stroke="#8884d8" fillOpacity={1} fill="#8884d8" strokeWidth={3}/>
-                    <Brush startIndex={7} endIndex={19}></Brush>
+                    <Brush startIndex={7} endIndex={19} height={20}></Brush>
                 </AreaChart>
             </ResponsiveContainer>
         </>
