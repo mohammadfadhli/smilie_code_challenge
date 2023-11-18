@@ -21,8 +21,8 @@ export default function BarCharts(props) {
                     <YAxis dataKey="relativehumidity_2m" />
                     <Tooltip />
                     <Legend />
-                    <Bar dataKey="time" fill="#8884d8" />
-                    <Bar dataKey="relativehumidity_2m" fill="#82ca9d" />
+                    <Bar name="Time" dataKey="time" fill="#8884d8" />
+                    <Bar name="Relative Humidity" dataKey="relativehumidity_2m" fill="#82ca9d" />
                 </BarChart>
             </ResponsiveContainer>
         </>
