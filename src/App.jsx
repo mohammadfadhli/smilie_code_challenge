@@ -38,9 +38,9 @@ function App() {
 
     console.log(data);
 
-    // Render Loading while waiting to fetch data from API
+    // wait for data to be fetched before rendering charts
     if (isLoading) {
-        return <div className="container mx-auto px-3 my-5">Loading...</div>;
+        return <div className="container mx-auto px-3 my-5"></div>;
     }
 
     return (
