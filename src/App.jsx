@@ -44,21 +44,21 @@ function App() {
     return (
         <>
             <div className="container mx-auto px-3 my-5">
-                <h1 className="text-4xl font-semibold">Dashboard</h1>
+                <h1 className="text-4xl font-semibold mb-5">Dashboard</h1>
                 <div className="grid gap-4 grid-cols-1">
-                    <div className="rounded-lg p-3 shadow-xl">
+                    <div className="rounded-lg p-3 shadow-xl bg-white">
                         <h2 className="text-lg font-semibold text-center">
                             Relative Humidity
                         </h2>
                         <BarCharts data={humidity}></BarCharts>
                     </div>
-                    <div className="rounded-lg p-3 shadow-xl">
+                    <div className="rounded-lg p-3 shadow-xl bg-white">
                         <h2 className="text-lg font-semibold text-center">
                             Temperature
                         </h2>
                         <LineCharts data={temperature}></LineCharts>
                     </div>
-                    <div className="rounded-lg p-3 shadow-xl">
+                    <div className="rounded-lg p-3 shadow-xl bg-white">
                         <h2 className="text-lg font-semibold text-center">
                             Radiation
                         </h2>
