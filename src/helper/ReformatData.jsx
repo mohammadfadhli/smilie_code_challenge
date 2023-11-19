@@ -34,6 +34,7 @@ export default function ReformatData(data, type) {
             return {
                 time: formatTime(time),
                 relativehumidity_2m: data.hourly.relativehumidity_2m[index],
+                unit: data.hourly_units.relativehumidity_2m
             };
         });
     }
@@ -43,7 +44,8 @@ export default function ReformatData(data, type) {
             return {
                 time: formatTime(time, false),
                 temperature_2m_max: data.daily.temperature_2m_max[index],
-                temperature_2m_min: data.daily.temperature_2m_min[index]
+                temperature_2m_min: data.daily.temperature_2m_min[index],
+                unit: data.daily_units.temperature_2m_max
             };
         });
     }
@@ -53,6 +55,7 @@ export default function ReformatData(data, type) {
             return {
                 time: formatTime(time),
                 direct_radiation: data.hourly.direct_radiation[index],
+                unit: data.hourly_units.direct_radiation
             };
         });
     }

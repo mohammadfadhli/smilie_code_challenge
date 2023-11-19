@@ -10,8 +10,9 @@ import {
     Brush
 } from "recharts";
 
-export default function BarCharts(props) {
-    const data = props.data;
+export default function BarCharts({data}) {
+    
+    const unit = (data && data.length > 0) ? data[0].unit : '';
 
     return (
         <>
@@ -19,7 +20,7 @@ export default function BarCharts(props) {
                 <BarChart data={data}>
                     <CartesianGrid strokeDasharray="3 3" vertical={false} />
                     <XAxis dataKey="time"/>
-                    <YAxis dataKey="relativehumidity_2m" width={30} tickCount={6}/>
+                    <YAxis dataKey="relativehumidity_2m" tickCount={6} label={{ value: unit, angle: -90, position: 'insideLeft' }}/>
                     <Tooltip />
                     <Legend />
                     <Bar name="Relative Humidity (2m)" dataKey="relativehumidity_2m" fill="#82ca9d" />

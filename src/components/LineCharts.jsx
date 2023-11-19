@@ -9,8 +9,8 @@ import {
     ResponsiveContainer
 } from "recharts";
 
-export default function LineCharts(props) {
-    const data = props.data;
+export default function LineCharts({data}) {
+    const unit = (data && data.length > 0) ? data[0].unit : '';
 
     return (
         <>
@@ -20,7 +20,7 @@ export default function LineCharts(props) {
                 >
                     <CartesianGrid strokeDasharray="3 3" vertical={false} />
                     <XAxis dataKey="time" />
-                    <YAxis width={30} domain={['dataMin - 2', 'auto']}/>
+                    <YAxis domain={['dataMin - 2', 'auto']} label={{ value: unit, angle: -90, position: 'insideLeft' }}/>
                     <Tooltip />
                     <Legend />
                     <Line

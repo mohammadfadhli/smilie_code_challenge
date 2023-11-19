@@ -10,16 +10,16 @@ import {
     Brush
 } from "recharts";
 
-export default function AreaCharts(props){
+export default function AreaCharts({data}){
 
-    const data = props.data;
+    const unit = (data && data.length > 0) ? data[0].unit : '';
 
     return(
         <>
             <ResponsiveContainer width="100%" height={500}>
                 <AreaChart data={data}>
                     <XAxis dataKey="time" />
-                    <YAxis width={30} domain={['auto', 'auto']} />
+                    <YAxis domain={['auto', 'auto']} label={{ value: unit, angle: -90, position: 'insideLeft' }}/>
                     <CartesianGrid strokeDasharray="3 3" vertical={false} />
                     <Tooltip />
                     <Legend />
