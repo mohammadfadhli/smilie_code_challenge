@@ -19,7 +19,7 @@ export default function BarCharts(props) {
                 <BarChart data={data}>
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="time" />
-                    <YAxis dataKey="relativehumidity_2m" width={20}/>
+                    <YAxis dataKey="relativehumidity_2m" width={30}/>
                     <Tooltip />
                     <Legend />
                     <Bar name="Relative Humidity (2m)" dataKey="relativehumidity_2m" fill="#82ca9d" />
