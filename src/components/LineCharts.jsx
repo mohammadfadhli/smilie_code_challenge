@@ -8,6 +8,7 @@ import {
     Line,
     ResponsiveContainer
 } from "recharts";
+import CustomToolTip from "./CustomToolTip";
 
 export default function LineCharts({data}) {
     const unit = (data && data.length > 0) ? data[0].unit : '';
@@ -21,7 +22,7 @@ export default function LineCharts({data}) {
                     <CartesianGrid strokeDasharray="3 3" vertical={false} />
                     <XAxis dataKey="time" />
                     <YAxis domain={['dataMin - 2', 'auto']} label={{ value: unit, angle: -90, position: 'insideLeft' }}/>
-                    <Tooltip />
+                    <Tooltip content={<CustomToolTip unit={unit}/>}/>
                     <Legend />
                     <Line
                         name="Maximum Temperature (2m)"

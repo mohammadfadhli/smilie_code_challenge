@@ -9,6 +9,7 @@ import {
     Legend,
     Brush
 } from "recharts";
+import CustomToolTip from "./CustomToolTip";
 
 export default function AreaCharts({data}){
 
@@ -21,7 +22,7 @@ export default function AreaCharts({data}){
                     <XAxis dataKey="time" />
                     <YAxis domain={['auto', 'auto']} label={{ value: unit, angle: -90, position: 'insideLeft' }}/>
                     <CartesianGrid strokeDasharray="3 3" vertical={false} />
-                    <Tooltip />
+                    <Tooltip content={<CustomToolTip unit={unit}/>}/>
                     <Legend />
                     <Area type="monotone" name="Direct Radiation" dataKey="direct_radiation" stroke="#8884d8" fillOpacity={1} fill="#8884d8" strokeWidth={3}/>
                     <Brush startIndex={7} endIndex={19} height={20}></Brush>

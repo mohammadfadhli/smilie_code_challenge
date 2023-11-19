@@ -18,7 +18,7 @@ export default function ReformatData(data, type) {
     const formatTime = (time,  hasTime=true) => {
 
         const date = new Date(time);
-        const formattedDate = `${date.getDate()} ${months[date.getMonth()]}`;
+        const formattedDate = `${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear().toString()}`;
 
         if (hasTime) {
             const formattedTime = `${date.getHours().toString().padStart(2, "0")}:${date.getMinutes().toString().padStart(2, "0")}`;
