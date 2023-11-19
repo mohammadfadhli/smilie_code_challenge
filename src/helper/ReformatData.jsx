@@ -18,7 +18,7 @@ export default function ReformatData(data, type) {
     const formatTime = (time,  hasTime=true) => {
 
         const date = new Date(time);
-        const formattedDate = `${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear().toString().slice(-2)}`;
+        const formattedDate = `${date.getDate()} ${months[date.getMonth()]}`;
 
         if (hasTime) {
             const formattedTime = `${date.getHours().toString().padStart(2, "0")}:${date.getMinutes().toString().padStart(2, "0")}`;
@@ -49,7 +49,7 @@ export default function ReformatData(data, type) {
     }
     else if(type == "radiation"){
         return data.hourly.time.map((time, index) => {
-        
+
             return {
                 time: formatTime(time),
                 direct_radiation: data.hourly.direct_radiation[index],

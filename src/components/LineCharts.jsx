@@ -20,19 +20,19 @@ export default function LineCharts(props) {
                 >
                     <CartesianGrid strokeDasharray="3 3" vertical={false} />
                     <XAxis dataKey="time" />
-                    <YAxis width={30} domain={['auto', 'auto']}/>
+                    <YAxis width={30} domain={['dataMin - 2', 'auto']}/>
                     <Tooltip />
                     <Legend />
                     <Line
                         name="Maximum Temperature (2m)"
-                        type="monotone"
+                        type="linear"
                         dataKey="temperature_2m_max"
                         stroke="#8884d8"
                         strokeWidth={3}
                     />
                     <Line
                         name="Minimum Temperature (2m)"
-                        type="monotone"
+                        type="linear"
                         dataKey="temperature_2m_min"
                         stroke="#82ca9d"
                         strokeWidth={3}

@@ -36,8 +36,6 @@ function App() {
         fetchData();
     }, []);
 
-    console.log(data);
-
     // wait for data to be fetched before rendering charts
     if (isLoading) {
         return <div className="container mx-auto px-3 my-5"></div>;

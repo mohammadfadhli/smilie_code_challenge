@@ -19,7 +19,7 @@ export default function AreaCharts(props){
             <ResponsiveContainer width="100%" height={500}>
                 <AreaChart data={data}>
                     <XAxis dataKey="time" />
-                    <YAxis width={30} domain={['auto', 'auto']}/>
+                    <YAxis width={30} domain={['auto', 'auto']} />
                     <CartesianGrid strokeDasharray="3 3" vertical={false} />
                     <Tooltip />
                     <Legend />
