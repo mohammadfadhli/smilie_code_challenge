@@ -38,13 +38,17 @@ function App() {
 
     // wait for data to be fetched before rendering charts
     if (isLoading) {
-        return <div className="container mx-auto px-3 my-5"></div>;
+        return <div className="container mx-auto px-3 my-5 text-center font-semibold">Loading...</div>;
     }
 
     return (
         <>
             <div className="container mx-auto px-3 my-5">
-                <h1 className="text-4xl font-semibold mb-5">Dashboard</h1>
+                <h1 className="text-4xl font-semibold mb-5">Weather Dashboard</h1>
+                <div className="text-center text-xl font-semibold mb-5">
+                    <p>{data.latitude}°N {data.longitude}°S {data.elevation}m above sea level</p>
+                    <p>Timezone: {data.timezone} ({data.timezone_abbreviation})</p>
+                </div>
                 <div className="grid gap-4 grid-cols-1">
                     <div className="rounded-lg p-3 shadow-xl bg-white">
                         <h2 className="text-lg font-semibold text-center">
