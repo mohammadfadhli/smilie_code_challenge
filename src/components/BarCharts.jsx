@@ -17,7 +17,7 @@ export default function BarCharts(props) {
         <>
             <ResponsiveContainer width="100%" height={500}>
                 <BarChart data={data}>
-                    <CartesianGrid strokeDasharray="3 3" />
+                    <CartesianGrid strokeDasharray="3 3" vertical={false} />
                     <XAxis dataKey="time" />
                     <YAxis dataKey="relativehumidity_2m" width={30}/>
                     <Tooltip />

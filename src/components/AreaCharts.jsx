@@ -20,7 +20,7 @@ export default function AreaCharts(props){
                 <AreaChart data={data}>
                     <XAxis dataKey="time" />
                     <YAxis width={30} domain={['auto', 'auto']}/>
-                    <CartesianGrid strokeDasharray="3 3" />
+                    <CartesianGrid strokeDasharray="3 3" vertical={false} />
                     <Tooltip />
                     <Legend />
                     <Area type="monotone" name="Direct Radiation" dataKey="direct_radiation" stroke="#8884d8" fillOpacity={1} fill="#8884d8" strokeWidth={3}/>

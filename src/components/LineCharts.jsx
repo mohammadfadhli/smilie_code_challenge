@@ -18,7 +18,7 @@ export default function LineCharts(props) {
                 <LineChart
                     data={data}
                 >
-                    <CartesianGrid strokeDasharray="3 3" />
+                    <CartesianGrid strokeDasharray="3 3" vertical={false} />
                     <XAxis dataKey="time" />
                     <YAxis width={30} domain={['auto', 'auto']}/>
                     <Tooltip />
