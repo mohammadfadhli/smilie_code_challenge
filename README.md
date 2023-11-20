@@ -45,6 +45,13 @@ To get a local copy up and running follow these simple example steps.
    http://localhost:5173/
    ```
 
+## Live Site
+
+1. You can also visit the deployed site at
+   ```sh
+   https://smilie-code-challenge.vercel.app/
+   ```
+
 ## Acknowledgments
 
 * [Recharts](https://recharts.org/en-US/): a composable charting library built on React components
