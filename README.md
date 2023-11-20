@@ -2,6 +2,12 @@
 
 [![React][React.js]][React-url]
 [![Tailwind][Tailwind.css]][Tailwind-url]
+[![Vite][Vite]][Vite-url]
+[![NPM][NPM]][NPM-url]
+
+## About The Project
+
+Smilie code challenge: a weather dashboard that displays a column chart (relative humidity), line chart (temperature) and area chart (radiation) using data from open-meteo weather API from dates 1 Oct 2023 to 10 Oct 2023.
 
 ## Getting Started
 
@@ -62,3 +68,8 @@ To get a local copy up and running follow these simple example steps.
 [React-url]: https://reactjs.org/
 [Tailwind.css]: https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white
 [Tailwind-url]: https://tailwindcss.com/
+[Vite]: https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white
+[Vite-url]: https://vitejs.dev/
+[NPM]: https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white
+[NPM-url]: https://www.npmjs.com/
+
