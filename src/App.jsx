@@ -11,8 +11,9 @@ function App() {
     const [humidity, setHumidity] = useState(null);
     const [temperature, setTemperature] = useState(null);
     const [radiation, setRadiation] = useState(null);
-    const apiUrl = import.meta.env.VITE_WEATHER_API;
+    const apiUrl = import.meta.env.VITE_WEATHER_API; // retrieve api endpoint from .env file.
 
+    // fetch data from api
     const fetchData = async () => {
         setIsLoading(true);
         try {
@@ -22,6 +23,9 @@ function App() {
             }
             const result = await response.json();
             setData(result);
+            /*
+                Reformat data into proper objects for recharts.
+            */
             setHumidity(ReformatData(result, "humidity"));
             setTemperature(ReformatData(result, "temperature"));
             setRadiation(ReformatData(result, "radiation"));
@@ -36,11 +40,17 @@ function App() {
         fetchData();
     }, []);
 
-    // wait for data to be fetched before rendering charts
+    /* 
+        wait for data to be fetched before rendering charts.
+        show loading... while fetching.
+    */
     if (isLoading) {
         return <div className="container mx-auto px-3 my-5 text-center font-semibold">Loading...</div>;
     }
 
+    /* 
+        return charts after data is fetched successfully
+    */
     return (
         <>
             <div className="container mx-auto px-3 my-5">
