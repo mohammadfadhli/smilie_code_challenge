@@ -61,6 +61,7 @@ To get a local copy up and running follow these simple example steps.
 ## Acknowledgments
 
 * [Recharts](https://recharts.org/en-US/): a composable charting library built on React components
+* [Open-Meteo](https://open-meteo.com/): an open-source weather API
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
