@@ -3,7 +3,6 @@ import BarCharts from "./components/BarCharts";
 import ReformatData from "./helper/ReformatData";
 import LineCharts from "./components/LineCharts";
 import AreaCharts from "./components/AreaCharts";
-import NavBar from "./components/NavBar";
 
 function App() {
     const [data, setData] = useState(0);
@@ -44,7 +43,6 @@ function App() {
 
     return (
         <>
-            <NavBar></NavBar>
             <div className="container mx-auto px-3 my-5">
                 <div className="text-center text-sm md:text-xl font-semibold mb-5">
                     <p>{data.latitude}°N {data.longitude}°S {data.elevation}m above sea level</p>
