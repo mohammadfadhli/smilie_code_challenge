@@ -24,7 +24,7 @@ export default function AreaCharts({data}){
                     <CartesianGrid strokeDasharray="3 3" vertical={false} />
                     <Tooltip content={<CustomToolTip unit={unit}/>}/>
                     <Legend />
-                    <Area type="monotone" name="Direct Radiation" dataKey="direct_radiation" stroke="#8884d8" fillOpacity={1} fill="#8884d8" strokeWidth={3}/>
+                    <Area type="monotone" name="Direct Radiation" dataKey="direct_radiation" stroke="#8884d8" fill="#8884d8" strokeWidth={3}/>
                     <Brush startIndex={7} endIndex={19} height={20}></Brush>
                 </AreaChart>
             </ResponsiveContainer>
