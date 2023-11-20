@@ -3,6 +3,7 @@ import BarCharts from "./components/BarCharts";
 import ReformatData from "./helper/ReformatData";
 import LineCharts from "./components/LineCharts";
 import AreaCharts from "./components/AreaCharts";
+import NavBar from "./components/NavBar";
 
 function App() {
     const [data, setData] = useState(0);
@@ -43,8 +44,8 @@ function App() {
 
     return (
         <>
+            <NavBar></NavBar>
             <div className="container mx-auto px-3 my-5">
-                <h1 className="text-xl md:text-4xl font-semibold mb-5">Weather Dashboard</h1>
                 <div className="text-center text-sm md:text-xl font-semibold mb-5">
                     <p>{data.latitude}°N {data.longitude}°S {data.elevation}m above sea level</p>
                     <p>Timezone: {data.timezone} ({data.timezone_abbreviation})</p>
